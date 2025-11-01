@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.inputpengguna.com.example.praktikum4.ui.theme.FormDataDiri
+import com.example.praktikum4.ui.theme.FormDataDiri1
 import com.example.praktikum4.ui.theme.Praktikum4Theme
 
 class MainActivity : ComponentActivity() {
@@ -20,28 +22,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             Praktikum4Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    FormDataDiri1(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Praktikum4Theme {
-        Greeting("Android")
     }
 }
