@@ -201,3 +201,32 @@ fun FormDataDiri1(modifier: Modifier = Modifier) {
             )
         }
 
+        // Button Submit
+        Button(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 24.dp)
+                .height(50.dp),
+            enabled = textNama.isNotEmpty() && textJK.isNotEmpty() &&
+                    textStatus.isNotEmpty() && textAlamat.isNotEmpty(),
+            onClick = {
+                nama = textNama
+                jenis = textJK
+                status = textStatus
+                alamat = textAlamat
+                showDialog = true // Tampilkan pop-up
+            },
+            shape = RoundedCornerShape(25.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = purpleButton,
+                disabledContainerColor = purpleButton.copy(alpha = 0.5f)
+            )
+        ) {
+            Text(
+                text = "Submit",
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.White
+            )
+        }
+
