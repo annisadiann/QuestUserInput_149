@@ -88,3 +88,28 @@ fun FormDataDiri1(modifier: Modifier = Modifier) {
                 .background(Color.White, shape = RoundedCornerShape(12.dp))
                 .padding(16.dp)
         ) {
+            // Nama Lengkap
+            Text(
+                text = "NAMA LENGKAP",
+                fontSize = 12.sp,
+                fontWeight = FontWeight.Medium,
+                color = Color.Gray,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+            OutlinedTextField(
+                value = textNama,
+                singleLine = true,
+                shape = RoundedCornerShape(8.dp),
+                placeholder = { Text(text = "Isian nama lengkap", color = Color.Gray) },
+                onValueChange = {
+                    textNama = it
+                },
+                modifier = Modifier.fillMaxWidth(),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedContainerColor = Color.White,
+                    unfocusedContainerColor = Color.White,
+                    focusedBorderColor = Color.LightGray,
+                    unfocusedBorderColor = Color.LightGray
+                )
+            )
+
