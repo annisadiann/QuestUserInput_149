@@ -230,3 +230,36 @@ fun FormDataDiri1(modifier: Modifier = Modifier) {
             )
         }
 
+        // Pop-up Dialog untuk menampilkan hasil
+        if (showDialog) {
+            AlertDialog(
+                onDismissRequest = { showDialog = false },
+                title = {
+                    Text(
+                        text = "Data Pendaftaran",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 18.sp
+                    )
+                },
+                text = {
+                    Column {
+                        Text(text = "Nama : $nama", fontSize = 14.sp)
+                        Text(text = "Gender : $jenis", fontSize = 14.sp, modifier = Modifier.padding(top = 4.dp))
+                        Text(text = "Status : $status", fontSize = 14.sp, modifier = Modifier.padding(top = 4.dp))
+                        Text(text = "Alamat : $alamat", fontSize = 14.sp, modifier = Modifier.padding(top = 4.dp))
+                    }
+                },
+                confirmButton = {
+                    TextButton(
+                        onClick = { showDialog = false }
+                    ) {
+                        Text("OK", color = purpleButton, fontWeight = FontWeight.Bold)
+                    }
+                },
+                containerColor = Color.White,
+                shape = RoundedCornerShape(16.dp)
+            )
+
+        }
+    }
+}
