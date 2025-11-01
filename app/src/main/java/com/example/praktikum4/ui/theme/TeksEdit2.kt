@@ -38,3 +38,8 @@ import androidx.compose.ui.Alignment
 
 @Composable
 fun FormDataDiri1(modifier: Modifier = Modifier) {
+    var textNama by remember { mutableStateOf("") }
+    var textAlamat by remember { mutableStateOf("") }
+    var textJK by remember { mutableStateOf("") }
+    var textStatus by remember { mutableStateOf("") }
+
