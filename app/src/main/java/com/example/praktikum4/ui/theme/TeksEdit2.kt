@@ -175,3 +175,29 @@ fun FormDataDiri1(modifier: Modifier = Modifier) {
                 }
             }
 
+            // Alamat
+            Text(
+                text = "ALAMAT",
+                fontSize = 12.sp,
+                fontWeight = FontWeight.Medium,
+                color = Color.Gray,
+                modifier = Modifier.padding(top = 20.dp, bottom = 8.dp)
+            )
+            OutlinedTextField(
+                value = textAlamat,
+                singleLine = true,
+                placeholder = { Text(text = "Alamat", color = Color.Gray) },
+                shape = RoundedCornerShape(8.dp),
+                onValueChange = {
+                    textAlamat = it
+                },
+                modifier = Modifier.fillMaxWidth(),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedContainerColor = Color.White,
+                    unfocusedContainerColor = Color.White,
+                    focusedBorderColor = Color.LightGray,
+                    unfocusedBorderColor = Color.LightGray
+                )
+            )
+        }
+
