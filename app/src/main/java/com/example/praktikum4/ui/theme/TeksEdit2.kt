@@ -49,3 +49,6 @@ fun FormDataDiri1(modifier: Modifier = Modifier) {
     var jenis by remember { mutableStateOf("") }
     var status by remember { mutableStateOf("") }
 
+    // Variabel untuk mengontrol pop-up
+    var showDialog by remember { mutableStateOf(false) }
+
