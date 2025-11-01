@@ -60,3 +60,11 @@ fun FormDataDiri1(modifier: Modifier = Modifier) {
     val purpleButton = Color(0xFF7C3AED)
     val purpleHeader = Color(0xFFB794F6)
 
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+            .background(purpleBackground)
+            .padding(horizontal = 16.dp, vertical = 16.dp),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.Start
+    ) {
