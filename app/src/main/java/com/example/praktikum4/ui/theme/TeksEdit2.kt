@@ -52,3 +52,6 @@ fun FormDataDiri1(modifier: Modifier = Modifier) {
     // Variabel untuk mengontrol pop-up
     var showDialog by remember { mutableStateOf(false) }
 
+    val gender: List<String> = listOf("Laki-laki", "Perempuan")
+    val statusPerkawinan: List<String> = listOf("Janda", "Lajang", "Duda")
+
